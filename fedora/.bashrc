@@ -32,3 +32,11 @@ PS1="$BLUE\u $PURPLE[$GREEN\w$PURPLE]"'$(test -n "$(git branch 2>/dev/null)" && 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
+
+mcd() { mkdir -p "$1"; cd "$1"; }
+
+pd() {
+    for i in $(seq "$1"); do
+        cd ..
+    done;
+}
