@@ -19,8 +19,6 @@ export CLICOLOR=1
 #alias egrep='egrep --color'
 #alias fgrep='fgrep --color'
 
-. $HOME/.bash_aliases
-
 color_base=30
 bgcolor_base=40
 
@@ -37,4 +35,6 @@ RESET="\[\e[0m\]"
 PS1="$BLUE\u $PURPLE[$GREEN\w$PURPLE] $BCYAN\$>$RESET "
 
 export ANT_HOME=/usr/local/Cellar/ant/1.9.4
+
+. $HOME/.bash_aliases
 
