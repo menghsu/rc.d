@@ -23,7 +23,7 @@ done
 
 RESET="\[\e[0m\]"
 
-PS1="$BLUE\u $PURPLE[$GREEN\w$PURPLE]"'$(test -n "$(git branch 2>/dev/null)" && echo " [")'"$BYELLOW"'$(git branch 2>/dev/null | grep "^*" | cut -d " " -f 2,2)'"$PURPLE"'$(test -n "$(git branch 2>/dev/null)" && echo "]")'" $BCYAN\$>$RESET "
+PS1="$BLUE\u $PURPLE[$GREEN"'$(pwd | sed "s/^\/\([^\/]\+\)\/.*\/\([^\/]\+\)\/\([^\/]\+\)\/\([^\/]*\)$/\/\1\/...\/\3\/\4/")'"$PURPLE]"'$(test -n "$(git branch 2>/dev/null)" && echo " [")'"$BYELLOW"'$(git branch 2>/dev/null | grep "^*" | cut -d " " -f 2,2)'"$PURPLE"'$(test -n "$(git branch 2>/dev/null)" && echo "]")'" $BCYAN\$>$RESET "
 
 # for root
 #PS1="\[\e[31m\]\u \[\e[35m\][\[\e[32m\]\W\[\e[35m\]] \[\e[1;36m\]\$>\[\e[0m\] "
