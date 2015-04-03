@@ -8,6 +8,8 @@ if [ -r $HOME/.bin ]; then
     export PATH="$PATH:$HOME/.bin"
 fi
 
+. $HOME/git/rc.d/common_bashrc.sh
+
 export CLICOLOR=1
 
 #alias ll='ls -lhF'
@@ -19,22 +21,21 @@ export CLICOLOR=1
 #alias egrep='egrep --color'
 #alias fgrep='fgrep --color'
 
-color_base=30
-bgcolor_base=40
-
-for color in BLACK RED GREEN YELLOW BLUE PURPLE CYAN GRAY; do
-    eval $color=\"'\[\e[0;'${color_base}m'\]'\"
-    eval B$color=\"'\[\e[1;'${color_base}m'\]'\"
-    eval BG$color=\"'\[\e['${bgcolor_base}m'\]'\"
-    (( color_base = $color_base + 1 ))
-    (( bgcolor_base = $bgcolor_base + 1 ))
-done
-
-RESET="\[\e[0m\]"
-
 PS1="$BLUE\u $PURPLE[$GREEN\w$PURPLE] $BCYAN\$>$RESET "
 
 export ANT_HOME=/usr/local/Cellar/ant/1.9.4
 
 . $HOME/.bash_aliases
 
+
+man() {
+    env GROFF_NO_SGR=1 \
+        LESS_TERMCAP_mb=$'\E[1;36m' \
+        LESS_TERMCAP_md=$'\E[1;36m' \
+        LESS_TERMCAP_me=$'\E[0m' \
+        LESS_TERMCAP_se=$'\E[0m' \
+        LESS_TERMCAP_so=$'\E[1;44;33m' \
+        LESS_TERMCAP_ue=$'\E[0m' \
+        LESS_TERMCAP_us=$'\E[1;33m' \
+        man "$@"
+}
