@@ -22,3 +22,15 @@ pd() {
         cd $target_dir
     fi
 }
+
+man() {
+    env GROFF_NO_SGR=1 \
+        LESS_TERMCAP_mb=$'\E[1;36m' \
+        LESS_TERMCAP_md=$'\E[1;36m' \
+        LESS_TERMCAP_me=$'\E[0m' \
+        LESS_TERMCAP_se=$'\E[0m' \
+        LESS_TERMCAP_so=$'\E[1;44;33m' \
+        LESS_TERMCAP_ue=$'\E[0m' \
+        LESS_TERMCAP_us=$'\E[1;33m' \
+        man "$@"
+}
