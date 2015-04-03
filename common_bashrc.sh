@@ -34,3 +34,20 @@ man() {
         LESS_TERMCAP_us=$'\E[1;33m' \
         man "$@"
 }
+
+function proxy_on() {
+    export no_proxy="localhost,127.0.0.1"
+    export http_proxy="http://127.0.0.1:1024"
+    export https_proxy=$http_proxy
+    export ftp_proxy=$http_proxy
+    export rsync_proxy=$http_proxy
+    echo -e "Proxy set to $http_proxy"
+}
+
+function proxy_off(){
+    unset http_proxy
+    unset https_proxy
+    unset ftp_proxy
+    unset rsync_proxy
+    echo -e "Proxy environment variable removed"
+}
