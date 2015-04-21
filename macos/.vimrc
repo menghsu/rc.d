@@ -24,7 +24,12 @@ colorscheme molokai
 "autocmd BufRead,BufNewFile *.ftl set filetype=html
 autocmd BufRead,BufNewFile *.ftl set filetype=ftl
 
-"statusline                                                                                                                                  
+" 将 pathogen 自身也置于独立目录中，需指定其路径 
+runtime bundle/autoload/pathogen.vim
+" 运行 pathogen
+execute pathogen#infect()
+
+" statusline ==>
 set statusline= 
 set statusline+=%7*\(%n)                                  "buffernr  
 set statusline+=%1*\ %<%F\                                "文件路径  
@@ -52,4 +57,4 @@ hi User7 ctermfg=white     ctermbg=darkred     cterm=bold
 hi User8 ctermfg=231       ctermbg=blue  
 "hi User9 ctermfg=#ffffff  ctermbg=#810085  
 hi User0 ctermfg=yellow  ctermbg=138  
-
+" <== statusline
