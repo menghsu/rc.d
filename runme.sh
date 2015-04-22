@@ -14,10 +14,10 @@ else
 fi
 
 test -f $HOME/.inputrc && mv $HOME/.inputrc $HOME/.inputrc.backup
-ln -s $selfpath/$sys_name/.inputrc $HOME/.inputrc
+ln -s $selfpath/$sys_name/inputrc.sh $HOME/.inputrc
 
 test -f $HOME/.vimrc && mv $HOME/.vimrc $HOME/.vimrc.backup
-ln -s $selfpath/$sys_name/.vimrc $HOME/.vimrc
+ln -s $selfpath/$sys_name/rc.vim $HOME/.vimrc
 
 test -d $HOME/.vim && mv $HOME/.vim $HOME/.vim.backup
 ln -s $selfpath/vim $HOME/.vim
@@ -25,4 +25,4 @@ ln -s $selfpath/vim $HOME/.vim
 echo -e "" >> $HOME/$rctarget
 echo "source $selfpath/common_bashrc.sh" >> $HOME/$rctarget
 echo "source $selfpath/aliases.sh" >> $HOME/$rctarget
-echo "source $selfpath/$sys_name/$rctarget" >> $HOME/$rctarget
+echo "source $selfpath/$sys_name/bashrc.sh" >> $HOME/$rctarget

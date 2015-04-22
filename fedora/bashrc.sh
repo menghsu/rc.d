@@ -1,8 +1,3 @@
-target="$HOME/git/rc.d/common_bashrc.sh"
-if [ -r "$target" ]; then
-    . $target
-fi
-
 PS1="$BLUE\u$BCYAN@${YELLOW}linux $PURPLE[$GREEN"'$(pwd | sed "s/^\/\([^\/]\+\)\/.*\/\([^\/]\+\)\/\([^\/]\+\)\/\([^\/]*\)$/\/\1\/...\/\3\/\4/")'"$PURPLE]"'$(test -n "$(git branch 2>/dev/null)" && echo " [")'"$BYELLOW"'$(git branch 2>/dev/null | grep "^*" | cut -d " " -f 2,2)'"$PURPLE"'$(test -n "$(git branch 2>/dev/null)" && echo "]")'" $BCYAN\$>$RESET "
 
 # for root

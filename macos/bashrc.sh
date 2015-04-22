@@ -8,21 +8,7 @@ if [ -r $HOME/.bin ]; then
     export PATH="$PATH:$HOME/.bin"
 fi
 
-target="$HOME/git/rc.d/common_bashrc.sh"
-if [ -r "$target" ]; then
-    . $target
-fi
-
 export CLICOLOR=1
-
-#alias ll='ls -lhF'
-#alias lla='ls -lhFA'
-#alias la='ls -A'
-#alias l='ls -CF'
-#
-#alias grep='grep --color'
-#alias egrep='egrep --color'
-#alias fgrep='fgrep --color'
 
 PS1="$BLUE\u $PURPLE[$GREEN\w$PURPLE] $BCYAN\$>$RESET "
 
