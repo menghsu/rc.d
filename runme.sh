@@ -24,5 +24,5 @@ ln -s $selfpath/vim $HOME/.vim
 
 echo -e "" >> $HOME/$rctarget
 echo "source $selfpath/common_bashrc.sh" >> $HOME/$rctarget
-echo "source $selfpath/aliases.sh" >> $HOME/$rctarget
 echo "source $selfpath/$sys_name/bashrc.sh" >> $HOME/$rctarget
+echo "source $selfpath/aliases.sh" >> $HOME/$rctarget

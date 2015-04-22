@@ -11,7 +11,3 @@ fi
 export CLICOLOR=1
 
 PS1="$BLUE\u $PURPLE[$GREEN\w$PURPLE] $BCYAN\$>$RESET "
-
-export ANT_HOME=/usr/local/Cellar/ant/1.9.4
-
-
