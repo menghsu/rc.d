@@ -17,7 +17,7 @@ test -f $HOME/.inputrc && mv $HOME/.inputrc $HOME/.inputrc.backup
 ln -s $selfpath/$sys_name/inputrc.sh $HOME/.inputrc
 
 test -f $HOME/.vimrc && mv $HOME/.vimrc $HOME/.vimrc.backup
-ln -s $selfpath/$sys_name/rc.vim $HOME/.vimrc
+ln -s $selfpath/rc.vim $HOME/.vimrc
 
 test -d $HOME/.vim && mv $HOME/.vim $HOME/.vim.backup
 ln -s $selfpath/vim $HOME/.vim
