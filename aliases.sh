@@ -19,6 +19,6 @@ alias l='ls -CF'
 alias gita='git add -A'
 alias gits='git status'
 alias gitl='git log --graph --pretty=format:"%Cred%h%Creset %Cgreen[%ci]%Creset %C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset" --abbrev-commit'
-alias gitu="git fetch && git rebase -v"
+alias gitu="git fetch && git rebase -v --autostash"
 alias gitp='git push origin HEAD:refs/for/$(git rev-parse --abbrev-ref HEAD)'
 alias gitup='gitu && gitp'
