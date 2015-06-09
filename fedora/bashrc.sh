@@ -3,8 +3,10 @@ PS1="$BLUE\u$BCYAN@${YELLOW}linux $PURPLE[$GREEN"'$(pwd | sed "s/^\/\([^\/]\+\)\
 # for root
 #PS1="\[\e[31m\]\u \[\e[35m\][\[\e[32m\]\W\[\e[35m\]] \[\e[1;36m\]\$>\[\e[0m\] "
 
-export GTK_IM_MODULE=fcitx
+export INPUT_METHOD=fcitx
 export QT_IM_MODULE=fcitx
-export XMODIFIERS="@im=fcitx"
+export XMODIFIERS=@im=fcitx
+export GTK3_IM_MODULE=fcitx
+export GTK_IM_MODULE=fcitx
 
 alias ls="ls --color=auto"
