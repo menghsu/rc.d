@@ -1,0 +1,18 @@
+[alias]
+    b = branch
+    m = commit
+	o = checkout
+    s = status
+    r = rebase
+    f = fetch
+    a = add
+    d = diff
+	sm = submodule
+    st = subtree
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+    rebase = auto
+

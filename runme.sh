@@ -13,14 +13,15 @@ else
     exit 1
 fi
 
-test -f $HOME/.inputrc && mv $HOME/.inputrc $HOME/.inputrc.backup
-ln -s $selfpath/$sys_name/inputrc.sh $HOME/.inputrc
+function setrclink() {
+    test -e $HOME/$1 && mv $HOME/$1 $HOME/$1.backup
+    ln -s $selfpath/$2 $HOME/$1
+}
 
-test -f $HOME/.vimrc && mv $HOME/.vimrc $HOME/.vimrc.backup
-ln -s $selfpath/rc.vim $HOME/.vimrc
-
-test -d $HOME/.vim && mv $HOME/.vim $HOME/.vim.backup
-ln -s $selfpath/vim $HOME/.vim
+setrclink .inputrc $sys_name/inputrc.sh
+setrclink .vimrc rc.vim
+setrclink .vim vim
+setrclink .gitconfig gitconfig/.gitconfig
 
 echo -e "" >> $HOME/$rctarget
 echo "source $selfpath/common_bashrc.sh" >> $HOME/$rctarget
