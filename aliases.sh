@@ -11,7 +11,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias igrep='grep -i --color=auto'
 
-alias ll='ls -lFh "+%Y-%m-%d %H:%M:%S"'
+alias ll='ls -lFh --time-style="+%Y/%m/%d_%H:%M:%S"'
 alias lla='ls -lFhA'
 alias la='ls -A'
 alias l='ls -CF'
