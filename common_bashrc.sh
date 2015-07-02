@@ -14,7 +14,7 @@ RESET="\[\e[0m\]"
 mcd() { mkdir -p "$1"; cd "$1"; }
 
 pd() {
-    if [[ "$1" =~ ^[0-9+]$ ]]; then
+    if [[ "$1" =~ ^[0-9]+$ ]]; then
         target_dir=".."
         for (( i=2; i<=$1; i++ )); do
             target_dir="${target_dir}/.."
