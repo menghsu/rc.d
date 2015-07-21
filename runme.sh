@@ -6,10 +6,10 @@ rctarget=""
 
 if [ "$sys_name" = "macos" ]; then
     rctarget=".bash_profile"
-elif [ "$sys_name" = "fedora" ]; then
+elif [ "$sys_name" = "linux" ]; then
     rctarget=".bashrc"
 else
-    echo "fedora or macos"
+    echo "linux or macos"
     exit 1
 fi
 
