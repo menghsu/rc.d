@@ -8,5 +8,3 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export GTK3_IM_MODULE=fcitx
 export GTK_IM_MODULE=fcitx
-
-alias ls="ls --color=auto"
