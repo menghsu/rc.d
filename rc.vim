@@ -23,6 +23,7 @@ colorscheme molokai
 
 "autocmd BufRead,BufNewFile *.ftl set filetype=html
 autocmd BufRead,BufNewFile *.ftl set filetype=ftl
+autocmd BufRead,BufNewFile *.scala set filetype=scala
 
 " 将 pathogen 自身也置于独立目录中，需指定其路径 
 runtime bundle/autoload/pathogen.vim
