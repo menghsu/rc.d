@@ -12,6 +12,7 @@ set cursorline
 set ic
 set smartindent
 set laststatus=2
+set iskeyword=@,48-57,_,192-255
 
 filetype on
 filetype plugin on
