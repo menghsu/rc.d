@@ -8,11 +8,12 @@ set incsearch
 set showcmd
 set ruler
 set cursorline
-"set cursorcolumn
+set cursorcolumn
 set ic
 set smartindent
 set laststatus=2
 set iskeyword=@,48-57,_,192-255
+set completeopt-=preview   "disable scratch preview window
 
 filetype on
 filetype plugin on

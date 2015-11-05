@@ -10,9 +10,4 @@
 	sm = submodule
     st = subtree
 [color]
-    ui = auto
-    diff = auto
-    status = auto
-    branch = auto
-    rebase = auto
-
+    ui = true

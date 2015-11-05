@@ -24,6 +24,8 @@ alias igrep='grep -i --color=auto'
 alias la='ls -A'
 alias l='ls'
 
+alias rmf='rm -rf'
+
 if type git > /dev/null 2>&1 ; then
     alias gita='git add -A'
     alias gitm='git commit -m'
