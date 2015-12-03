@@ -30,7 +30,8 @@ if type git > /dev/null 2>&1 ; then
     alias gitm='git commit -m'
     alias gits='git status'
     alias gitl='git log --graph --pretty=format:"%Cred%h%Creset %Cgreen[%ci]%Creset %C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset" --abbrev-commit'
-    alias gitu="git fetch && git rebase -v --autostash"
+    #alias gitu="git fetch && git rebase -v --autostash"
+    alias gitu="git pull -r -v"
     alias gitp='git push origin HEAD:refs/for/$(git rev-parse --abbrev-ref HEAD)'
     alias gith='git push origin $(git rev-parse --abbrev-ref HEAD)'
     alias gitup='gitu && gitp'
