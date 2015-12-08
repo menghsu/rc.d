@@ -7,6 +7,7 @@
     f = fetch
     a = add
     d = diff
+    t = stash
 	sm = submodule
     st = subtree
 [color]
