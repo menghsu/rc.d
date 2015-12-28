@@ -12,3 +12,7 @@
     st = subtree
 [color]
     ui = true
+;[core]
+;    pager = cat
+[pager]
+	stash = false
