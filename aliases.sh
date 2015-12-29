@@ -37,5 +37,5 @@ if type git > /dev/null 2>&1 ; then
     alias gitup='gitu && gitp'
     alias gitam='git add -A && git commit -m'
     alias gitlog='git log --graph --pretty=format:"%Cred%h%Creset %Cgreen[%ci]%Creset %C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset" --abbrev-commit'
-    alias gittag='git log --tags --decorate --simplify-by-decoration --oneline'
+    alias gittag='git --no-pager log --tags --decorate --simplify-by-decoration --oneline'
 fi

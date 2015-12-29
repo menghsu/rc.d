@@ -16,3 +16,4 @@
 ;    pager = cat
 [pager]
 	stash = false
+	tag = false
