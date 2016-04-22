@@ -17,3 +17,5 @@
 [pager]
 	stash = false
 	tag = false
+[push]
+	default = simple
