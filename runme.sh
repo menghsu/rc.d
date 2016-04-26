@@ -23,7 +23,7 @@ setrclink .vimrc rc.vim
 setrclink .vim vim
 setrclink .gitconfig git/.gitconfig
 
-echo -e "" >> $HOME/$rctarget
+echo -e "" > $HOME/$rctarget
 echo "export os_name=$os_name" >> $HOME/$rctarget
 echo "source $selfpath/common_bashrc.sh" >> $HOME/$rctarget
 echo "source $selfpath/$os_name/bashrc.sh" >> $HOME/$rctarget

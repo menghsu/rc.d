@@ -30,6 +30,7 @@ if type git > /dev/null 2>&1 ; then
     alias gita='git add -A'
     alias gitm='git commit -m'
     alias gits='git status'
+    alias gitd='git diff'
     alias gitu="git fetch && git rebase -v --autostash @{upstream}"
     #alias gitu="git pull -r -v"
     alias gitpr='git push origin HEAD:refs/for/$(git rev-parse --abbrev-ref HEAD)'
